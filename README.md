@@ -10,7 +10,7 @@ This is the repo for EMNLP2021-Findings paper - "Exploiting Curriculum Learning 
 
 This paper exploits curriculum learning (CL) in unsupervised neural machine translation (UNMT). Specifically, we design methods to estimate the quality of pseudo bi-text and apply CL framework to improve UNMT. Please refer to the paper for more details.
 
-<img src="images/image.png" alt="image-20210903154759030" width="450" />
+<div align=center><img src="images/image.png" alt="image-20210903154759030" width="450" /></div>
 
 #### Dependencies
 
@@ -32,7 +32,7 @@ This repo is modified based on [XLM toolkit](https://github.com/facebookresearch
 For XLM:
 
 ```
-bash run_unmt_ende.sh
+bash CL_XLM/run_unmt_ende.sh
 ```
 
 For MASS:
