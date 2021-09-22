@@ -43,7 +43,7 @@ bash CL_MASS/run_unmt_enro.sh
 
 If you have multiple GPUs, please modify the scripts according to [XLM README](https://github.com/facebookresearch/XLM)
 
-#### Difficulty File Prepare
+#### Prepare Difficulty File 
 
 -------------------------------------------------------
 
