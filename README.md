@@ -1,12 +1,8 @@
-### Exploiting Curriculum Learning in Unsupervised Neural Machine Translation
-
--------------------------------------------
+# Exploiting Curriculum Learning in Unsupervised Neural Machine Translation
 
 This is the repo for EMNLP2021-Findings paper - "Exploiting Curriculum Learning in Unsupervised Neural Machine Translation"
 
-#### Introduction
-
----------------------------------------------------------------
+## Introduction
 
 This paper exploits curriculum learning (CL) in unsupervised neural machine translation (UNMT). Specifically, we design methods to estimate the quality of pseudo bi-text and apply CL framework to improve UNMT. Please refer to the paper for more details.
 
