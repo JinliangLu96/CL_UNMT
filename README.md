@@ -47,7 +47,11 @@ If you have multiple GPUs, please modify the scripts according to [XLM README](h
 
 -------------------------------------------------------
 
-We would upload the python scripts which used for difficulty computation.
+Difficulty computation needs cross-lingual word embeddings, which are obtained by unsupervised training method [MUSE](https://github.com/facebookresearch/MUSE). The cross-lingual distances of word pairs are store in the directory *CL_diff/data*. You can run the following command to compute the difficulty file for your training data.
+
+```
+python <DISTANCE_FILE> <TRAINING_DATA_FILE> <OUTPUT_FILE>
+```
 
 #### Pre-trained Language Models
 
