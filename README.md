@@ -8,9 +8,7 @@ This paper exploits curriculum learning (CL) in unsupervised neural machine tran
 
 <div align=center><img src="images/image.png" alt="image-20210903154759030" width="450" /></div>
 
-#### Dependencies
-
-----------------------------------------------------------------
+## Dependencies
 
 - Python 3
 - [NumPy](http://www.numpy.org/)
@@ -19,9 +17,7 @@ This paper exploits curriculum learning (CL) in unsupervised neural machine tran
 - [Moses](https://github.com/facebookresearch/XLM/tree/master/tools#tokenizers) (scripts to clean and tokenize text only - no installation required)
 - [Apex](https://github.com/nvidia/apex#quick-start) (for fp16 training)
 
-#### Train an UNMT model
-
---------------------------------------------------
+## Train an UNMT model
 
 This repo is modified based on [XLM toolkit](https://github.com/facebookresearch/XLM) and [MASS](https://github.com/microsoft/MASS). You can run the model through following commands.
 
@@ -39,9 +35,7 @@ bash CL_MASS/run_unmt_enro.sh
 
 If you have multiple GPUs, please modify the scripts according to [XLM README](https://github.com/facebookresearch/XLM)
 
-#### Prepare Difficulty File 
-
--------------------------------------------------------
+## Prepare Difficulty File 
 
 Difficulty computation needs cross-lingual word embeddings, which are obtained by unsupervised training method [MUSE](https://github.com/facebookresearch/MUSE). The cross-lingual distances of word pairs are store in the directory *CL_diff/data*. You can run the following command to compute the difficulty file for your training data.
 
@@ -49,7 +43,7 @@ Difficulty computation needs cross-lingual word embeddings, which are obtained b
 python <DISTANCE_FILE> <TRAINING_DATA_FILE> <OUTPUT_FILE>
 ```
 
-#### Pre-trained Language Models
+## Pre-trained Language Models
 
 For en-de, en-fr, en-ro, please download from [XLM README](https://github.com/facebookresearch/XLM) and [MASS README](https://github.com/microsoft/MASS).
 
@@ -59,9 +53,7 @@ For en-zh, our model can be download through the following link.
 | ----------------------------------------------- | -------- |
 | https://pan.baidu.com/s/1vTQDjWF119EITVIHew-leA | tkvn     |
 
-#### Reference
-
----------------------------------------
+## Reference
 
 ```
 @article{lu2021,
