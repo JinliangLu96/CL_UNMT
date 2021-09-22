@@ -17,6 +17,14 @@ This paper exploits curriculum learning (CL) in unsupervised neural machine tran
 - [Moses](https://github.com/facebookresearch/XLM/tree/master/tools#tokenizers) (scripts to clean and tokenize text only - no installation required)
 - [Apex](https://github.com/nvidia/apex#quick-start) (for fp16 training)
 
+## Prepare Difficulty File 
+
+Difficulty computation needs cross-lingual word embeddings, which are obtained by unsupervised training method [MUSE](https://github.com/facebookresearch/MUSE). In fact, you can use the cross-lingual distances of word pairs which are extract by us (They are store in the directory *CL_diff/data*). Then, You can run the following command to compute the difficulty file for your training data.
+
+```
+python <DISTANCE_FILE> <TRAINING_DATA_FILE> <OUTPUT_FILE>
+```
+
 ## Train an UNMT model
 
 This repo is modified based on [XLM toolkit](https://github.com/facebookresearch/XLM) and [MASS](https://github.com/microsoft/MASS). You can run the model through following commands.
@@ -34,14 +42,6 @@ bash CL_MASS/run_unmt_enro.sh
 ```
 
 If you have multiple GPUs, please modify the scripts according to [XLM README](https://github.com/facebookresearch/XLM)
-
-## Prepare Difficulty File 
-
-Difficulty computation needs cross-lingual word embeddings, which are obtained by unsupervised training method [MUSE](https://github.com/facebookresearch/MUSE). The cross-lingual distances of word pairs are store in the directory *CL_diff/data*. You can run the following command to compute the difficulty file for your training data.
-
-```
-python <DISTANCE_FILE> <TRAINING_DATA_FILE> <OUTPUT_FILE>
-```
 
 ## Pre-trained Language Models
 
