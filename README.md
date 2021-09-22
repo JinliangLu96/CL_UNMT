@@ -2,7 +2,7 @@
 
 -------------------------------------------
 
-This is the repo for EMNLP2022-Findings paper - "Exploiting Curriculum Learning in Unsupervised Neural Machine Translation"
+This is the repo for EMNLP2021-Findings paper - "Exploiting Curriculum Learning in Unsupervised Neural Machine Translation"
 
 #### Introduction
 
@@ -10,11 +10,7 @@ This is the repo for EMNLP2022-Findings paper - "Exploiting Curriculum Learning 
 
 This paper exploits curriculum learning (CL) in unsupervised neural machine translation (UNMT). Specifically, we design methods to estimate the quality of pseudo bi-text and apply CL framework to improve UNMT. Please refer to the paper for more details.
 
-<<<<<<< HEAD
 <img src="images/image.png" alt="image-20210903154759030" width="450" />
-=======
-<img src="images/image.png" alt="image-20210903154759030" style="zoom:25%;" />
->>>>>>> 30ce02e563e13aa33eaafdca0da7defb0c325ecc
 
 #### Dependencies
 
@@ -31,18 +27,18 @@ This paper exploits curriculum learning (CL) in unsupervised neural machine tran
 
 --------------------------------------------------
 
-This repo is modified based on [XLM toolkit](https://github.com/facebookresearch/XLM). You can run the model through following commands.
+This repo is modified based on [XLM toolkit](https://github.com/facebookresearch/XLM) and [MASS](https://github.com/microsoft/MASS). You can run the model through following commands.
 
-For single-GPU:
+For XLM:
 
 ```
 bash run_unmt_ende.sh
 ```
 
-For Slurm:
+For MASS:
 
 ```
-bash run_unmt_ende.slurm
+bash CL_MASS/run_unmt_enro.sh
 ```
 
 If you have multiple GPUs, please modify the scripts according to [XLM README](https://github.com/facebookresearch/XLM)
@@ -55,7 +51,7 @@ We would upload the python scripts which used for difficulty computation.
 
 #### Pre-trained Language Models
 
-For en-de, en-fr, en-ro, please download from [XLM README](https://github.com/facebookresearch/XLM).
+For en-de, en-fr, en-ro, please download from [XLM README](https://github.com/facebookresearch/XLM) and [MASS README](https://github.com/microsoft/MASS).
 
 For en-zh, our model can be download through the following link.
 
@@ -75,11 +71,3 @@ For en-zh, our model can be download through the following link.
   year={2021}
 }
 ```
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> 30ce02e563e13aa33eaafdca0da7defb0c325ecc
