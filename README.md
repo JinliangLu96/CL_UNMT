@@ -1,24 +1,14 @@
-### Exploiting Curriculum Learning in Unsupervised Neural Machine Translation
+# Exploiting Curriculum Learning in Unsupervised Neural Machine Translation
 
--------------------------------------------
+This is the repo for EMNLP2021-Findings paper - "Exploiting Curriculum Learning in Unsupervised Neural Machine Translation"
 
-This is the repo for EMNLP2022-Findings paper - "Exploiting Curriculum Learning in Unsupervised Neural Machine Translation"
-
-#### Introduction
-
----------------------------------------------------------------
+## Introduction
 
 This paper exploits curriculum learning (CL) in unsupervised neural machine translation (UNMT). Specifically, we design methods to estimate the quality of pseudo bi-text and apply CL framework to improve UNMT. Please refer to the paper for more details.
 
-<<<<<<< HEAD
-<img src="images/image.png" alt="image-20210903154759030" width="450" />
-=======
-<img src="images/image.png" alt="image-20210903154759030" style="zoom:25%;" />
->>>>>>> 30ce02e563e13aa33eaafdca0da7defb0c325ecc
+<div align=center><img src="images/image.png" alt="image-20210903154759030" width="450" /></div>
 
-#### Dependencies
-
-----------------------------------------------------------------
+## Dependencies
 
 - Python 3
 - [NumPy](http://www.numpy.org/)
@@ -27,35 +17,35 @@ This paper exploits curriculum learning (CL) in unsupervised neural machine tran
 - [Moses](https://github.com/facebookresearch/XLM/tree/master/tools#tokenizers) (scripts to clean and tokenize text only - no installation required)
 - [Apex](https://github.com/nvidia/apex#quick-start) (for fp16 training)
 
-#### Train an UNMT model
+## Train an UNMT model
 
---------------------------------------------------
+This repo is modified based on [XLM toolkit](https://github.com/facebookresearch/XLM) and [MASS](https://github.com/microsoft/MASS). You can run the model through following commands.
 
-This repo is modified based on [XLM toolkit](https://github.com/facebookresearch/XLM). You can run the model through following commands.
-
-For single-GPU:
+For XLM:
 
 ```
-bash run_unmt_ende.sh
+bash CL_XLM/run_unmt_ende.sh
 ```
 
-For Slurm:
+For MASS:
 
 ```
-bash run_unmt_ende.slurm
+bash CL_MASS/run_unmt_enro.sh
 ```
 
 If you have multiple GPUs, please modify the scripts according to [XLM README](https://github.com/facebookresearch/XLM)
 
-#### Difficulty File Prepare
+## Prepare Difficulty File 
 
--------------------------------------------------------
+Difficulty computation needs cross-lingual word embeddings, which are obtained by unsupervised training method [MUSE](https://github.com/facebookresearch/MUSE). The cross-lingual distances of word pairs are store in the directory *CL_diff/data*. You can run the following command to compute the difficulty file for your training data.
 
-We would upload the python scripts which used for difficulty computation.
+```
+python <DISTANCE_FILE> <TRAINING_DATA_FILE> <OUTPUT_FILE>
+```
 
-#### Pre-trained Language Models
+## Pre-trained Language Models
 
-For en-de, en-fr, en-ro, please download from [XLM README](https://github.com/facebookresearch/XLM).
+For en-de, en-fr, en-ro, please download from [XLM README](https://github.com/facebookresearch/XLM) and [MASS README](https://github.com/microsoft/MASS).
 
 For en-zh, our model can be download through the following link.
 
@@ -63,9 +53,7 @@ For en-zh, our model can be download through the following link.
 | ----------------------------------------------- | -------- |
 | https://pan.baidu.com/s/1vTQDjWF119EITVIHew-leA | tkvn     |
 
-#### Reference
-
----------------------------------------
+## Reference
 
 ```
 @article{lu2021,
@@ -75,11 +63,3 @@ For en-zh, our model can be download through the following link.
   year={2021}
 }
 ```
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> 30ce02e563e13aa33eaafdca0da7defb0c325ecc
