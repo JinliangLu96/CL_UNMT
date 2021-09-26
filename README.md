@@ -1,6 +1,6 @@
 # Exploiting Curriculum Learning in Unsupervised Neural Machine Translation
 
-This is the repo for EMNLP2021-Findings paper - "[Exploiting Curriculum Learning in Unsupervised Neural Machine Translation](https://arxiv.org/pdf/2109.11177.pdf)"
+This is the repo for the paper - "[Exploiting Curriculum Learning in Unsupervised Neural Machine Translation](https://arxiv.org/pdf/2109.11177.pdf)" to appear in EMNLP Findings 2021.
 
 ## Introduction
 
