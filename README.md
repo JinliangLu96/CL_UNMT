@@ -22,7 +22,7 @@ This paper exploits curriculum learning (CL) in unsupervised neural machine tran
 Difficulty computation needs cross-lingual word embeddings, which are obtained by unsupervised training method [MUSE](https://github.com/facebookresearch/MUSE). In fact, you can use the cross-lingual distances of word pairs which are extract by us (They are store in the directory *CL_diff/data*). Then, You can run the following command to compute the difficulty file for your training data.
 
 ```
-python <DISTANCE_FILE> <TRAINING_DATA_FILE> <OUTPUT_FILE>
+python CL_diff/compute_tfidf_wordtrans_diff.py <DISTANCE_FILE> <TRAINING_DATA_FILE> <OUTPUT_FILE>
 ```
 
 ## Train an UNMT model
